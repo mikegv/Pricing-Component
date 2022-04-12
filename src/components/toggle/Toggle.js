@@ -1,11 +1,26 @@
 import React from 'react';
 import './Toggle.css'
 
-const Toggle = () => {
+const Toggle = (props) => {
     return (
-        <div class="toggleLabel">
-            Annually
-            Monthly
+        <div className='toggleArea'>
+
+            <p>Annually</p>
+            <input
+                className="react-switch-checkbox"
+                id={`react-switch-new`}
+                type="checkbox"
+                checked={props.isChecked}
+                onClick={props.toggleSwitched}
+            />
+            <label
+                className="react-switch-label"
+                htmlFor={`react-switch-new`}
+            >
+                <span className={`react-switch-button`} />
+            </label>
+            <p>Monthly</p>
+
         </div>
     );
 };

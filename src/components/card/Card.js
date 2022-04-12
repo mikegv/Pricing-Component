@@ -7,7 +7,7 @@ const Card = (props) => {
     return (
         <div className={cardStyle}>
             <h3>{info.name}</h3>
-            <h1>{info.monthlyPrice}</h1>
+            <h1>{props.annual ? info.monthlyPrice : info.yearlyPrice}</h1>
             <hr />
           {info.features.map(item => {
                 return <><h3>{item}</h3> <hr /></>

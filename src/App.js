@@ -2,6 +2,7 @@ import './App.css';
 import CardHolder from './components/cardHolder/CardHolder'
 import Heading from './components/heading/Heading'
 import Toggle from './components/toggle/Toggle'
+import { useState } from 'react';
 
 const options = [
   {
@@ -26,14 +27,20 @@ const options = [
 
 
 function App() {
+
+  const [isChecked, setIsChecked] = useState(false)
+
+  const toggleSwitched = () => {
+    setIsChecked(prevState => !prevState)
+  }
   return (
     <div className="App">
 
       <Heading />
 
-      <Toggle />
+      <Toggle isChecked={isChecked} toggleSwitched={toggleSwitched} />
 
-      <CardHolder subscriptions={options}/>
+      <CardHolder subscriptions={options} isChecked={isChecked} />
 
 
     </div>

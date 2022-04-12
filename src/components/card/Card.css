@@ -5,6 +5,7 @@
     margin: 20px 10px 10px 10px;
     padding: 20px 25px 20px 25px;
     border-radius: 8px;
+    box-shadow: 0px 5px 30px 5px;
 }
 
 .card * {
@@ -27,6 +28,7 @@
 }
 .featured{
     background-color: hsl(232, 95%, 68%);
+    transform: scale(1.11);
     color: white;
 }
 .featured h3{
@@ -36,3 +38,7 @@
     background-color: white;
     color: hsl(232, 95%, 68%);
 }
+
+@media screen and (min-width: 800px) {
+    .featured{    }
+  }

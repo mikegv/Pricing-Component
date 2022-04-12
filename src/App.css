@@ -5,13 +5,21 @@
 }
 
 .App{
-  width: 375px;
+  min-width: 375px;
   min-height: 100vh;
-  background: url('../public/images/bg-top.svg') 220px 0px hsl(240, 78%, 98%);
+  background: url('../public/images/bg-top.svg') no-repeat 220px 0px hsl(240, 78%, 98%);
   color: hsl(232, 13%, 33%);
   display:flex;
   flex-direction: column;
   align-items: center;
   padding: 30px 20px 20px 20px;
 
+}
+
+@media screen and (min-width: 800px) {
+  .App{
+    background-image: url('../public/images/bg-top.svg');
+    background-position: top right;
+    justify-content: space-around;
+  }
 }

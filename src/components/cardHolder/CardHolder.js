@@ -6,7 +6,7 @@ const CardHolder = (props) => {
     const subscriptions = props.subscriptions
     return (
         <div className='cardHolder'>
-            {subscriptions.map(item => <Card info={item} />)}
+            {subscriptions.map(item => <Card info={item} annual={props.isChecked} />)}
         </div>
     );
 };
