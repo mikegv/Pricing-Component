@@ -11,7 +11,7 @@ const Toggle = (props) => {
                 id={`react-switch-new`}
                 type="checkbox"
                 checked={props.isChecked}
-                onClick={props.toggleSwitched}
+                onChange={props.toggleSwitched}
             />
             <label
                 className="react-switch-label"

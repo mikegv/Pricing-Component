@@ -9,8 +9,8 @@ const Card = (props) => {
             <h3>{info.name}</h3>
             <h1>{props.annual ? info.monthlyPrice : info.yearlyPrice}</h1>
             <hr />
-          {info.features.map(item => {
-                return <><h3>{item}</h3> <hr /></>
+          {info.features.map((item, index) => {
+                return <h3 key={index}>{item}<hr /></h3>
               }
           )}
             <button>LEARN MORE</button>
